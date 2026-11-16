@@ -1533,3 +1533,235 @@ button {
     font-size: 1.25rem;
   }
 }
+
+/* ==========================================================================
+   NewtonPhone Signature Square Camera System
+   ========================================================================== */
+.view-mode-switcher {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 18px;
+  gap: 4px;
+  z-index: 4;
+  position: relative;
+}
+
+.view-mode-btn {
+  padding: 7px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-dark-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-mode-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.view-mode-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Square Camera Module Showcase */
+.square-camera-showcase {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 35px auto 10px;
+  max-width: 720px;
+  animation: fadeInCamera 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.square-camera-showcase.active {
+  display: flex;
+}
+
+@keyframes fadeInCamera {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.square-camera-island {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(135deg, #2b2824 0%, #151412 50%, #0a0a09 100%);
+  border-radius: 36px;
+  border: 2.5px solid rgba(217, 186, 155, 0.35);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.85),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.6);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 18px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.square-camera-island:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.95),
+    0 0 40px rgba(209, 184, 157, 0.2),
+    inset 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Individual Square Lenses */
+.square-lens {
+  position: relative;
+  background: radial-gradient(circle at 35% 35%, #1a2230 0%, #080c14 55%, #020305 100%);
+  border-radius: 16px;
+  border: 3px solid #4a453f;
+  box-shadow: 
+    0 6px 14px rgba(0, 0, 0, 0.7),
+    inset 0 0 18px rgba(0, 113, 227, 0.25),
+    inset 0 2px 3px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.square-lens:hover {
+  border-color: #d1b89d;
+  transform: scale(1.05);
+  box-shadow: 
+    0 10px 22px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 113, 227, 0.4),
+    inset 0 0 22px rgba(0, 113, 227, 0.4);
+}
+
+/* Square Optical Aperture */
+.square-lens-aperture {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #020305;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.square-lens-aperture::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  filter: blur(1px);
+}
+
+.square-lens-info {
+  margin-top: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #d1b89d;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Fourth Quarter: Flash + LiDAR in Square Module */
+.square-aux-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.square-flash-unit {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: radial-gradient(circle, #fffbe6 30%, #e6a83e 100%);
+  border: 2px solid #5a5349;
+  box-shadow: 0 0 16px rgba(230, 168, 62, 0.4);
+}
+
+.square-lidar-unit {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #000000;
+  border: 1.5px solid #3d3b37;
+  position: relative;
+}
+
+.square-lidar-unit::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #1c4e80;
+  box-shadow: 0 0 8px #0071e3;
+}
+
+.camera-caption {
+  margin-top: 22px;
+  text-align: center;
+  max-width: 580px;
+}
+
+.camera-caption-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.camera-caption-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-dark-secondary);
+  line-height: 1.5;
+}
+
+.square-camera-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(209, 184, 157, 0.15);
+  color: #d1b89d;
+  border: 1px solid rgba(209, 184, 157, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}

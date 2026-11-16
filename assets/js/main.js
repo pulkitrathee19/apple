@@ -451,3 +451,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Bag UI
   updateBagUI();
 });
+
+  // --- View Mode Switcher (Device Overview vs Square Camera System) ---
+  const btnViewDevice = document.getElementById('btn-view-device');
+  const btnViewCamera = document.getElementById('btn-view-camera');
+  const deviceShowcaseWrap = document.getElementById('device-showcase-wrap');
+  const cameraShowcase = document.getElementById('camera-showcase');
+
+  if (btnViewDevice && btnViewCamera && deviceShowcaseWrap && cameraShowcase) {
+    btnViewDevice.addEventListener('click', () => {
+      btnViewDevice.classList.add('active');
+      btnViewCamera.classList.remove('active');
+      deviceShowcaseWrap.style.display = 'flex';
+      cameraShowcase.classList.remove('active');
+    });
+
+    btnViewCamera.addEventListener('click', () => {
+      btnViewCamera.classList.add('active');
+      btnViewDevice.classList.remove('active');
+      deviceShowcaseWrap.style.display = 'none';
+      cameraShowcase.classList.add('active');
+    });
+  }

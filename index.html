@@ -119,16 +119,61 @@
             <button class="color-dot dot-black" data-color="black" title="Black Titanium" aria-label="Black Titanium"></button>
           </div>
         </div>
+
+        <!-- Camera / Device View Mode Switcher -->
+        <div class="view-mode-switcher">
+          <button class="view-mode-btn active" id="btn-view-device">
+            <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+            NewtonPhone 16 Pro
+          </button>
+          <button class="view-mode-btn" id="btn-view-camera">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><rect x="6" y="6" width="5" height="5" rx="1" fill="currentColor"/><rect x="13" y="6" width="5" height="5" rx="1" fill="currentColor"/><rect x="6" y="13" width="5" height="5" rx="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/></svg>
+            Square Camera System
+          </button>
+        </div>
       </div>
 
       <!-- Hero Product Showcase Image -->
-      <div class="hero-image-wrap">
+      <div class="hero-image-wrap" id="device-showcase-wrap">
         <img 
           src="assets/images/hero_iphone_pro.jpg" 
           alt="NewtonPhone 16 Pro in Desert Titanium finish showcasing the Pro camera system and contoured titanium edges" 
           class="hero-main-img"
           id="pro-hero-device"
         />
+      </div>
+
+      <!-- Interactive Signature Square Camera Module Showcase -->
+      <div class="square-camera-showcase" id="camera-showcase">
+        <div class="square-camera-tag">Signature Square Architecture</div>
+        <div class="square-camera-island">
+          <!-- Lens 1: 48MP Square Fusion -->
+          <div class="square-lens" title="48MP Square Fusion Main Camera">
+            <div class="square-lens-aperture"></div>
+            <div class="square-lens-info">48MP Main<br>24mm f/1.6</div>
+          </div>
+          <!-- Lens 2: 48MP Square Ultra-Wide -->
+          <div class="square-lens" title="48MP Square Ultra-Wide Camera">
+            <div class="square-lens-aperture"></div>
+            <div class="square-lens-info">48MP Ultra-Wide<br>13mm f/2.2</div>
+          </div>
+          <!-- Lens 3: 12MP 5x Square Telephoto -->
+          <div class="square-lens" title="12MP 5x Square Telephoto Camera">
+            <div class="square-lens-aperture"></div>
+            <div class="square-lens-info">5x Telephoto<br>120mm f/2.8</div>
+          </div>
+          <!-- Cell 4: True Tone Flash & LiDAR Scanner -->
+          <div class="square-aux-cell">
+            <div class="square-flash-unit" title="Adaptive True Tone Flash"></div>
+            <div class="square-lidar-unit" title="LiDAR Scanner"></div>
+          </div>
+        </div>
+        <div class="camera-caption">
+          <div class="camera-caption-title">Revolutionary Square Camera System</div>
+          <p class="camera-caption-desc">
+            A bold geometric leap. Engineered with edge-to-edge square sensor optics that eliminate corner vignetting, capture 24% more light, and unlock full quad-pixel precision across every focal length.
+          </p>
+        </div>
       </div>
 
       <!-- Apple Hardware Feature Highlights Ribbon -->
@@ -142,8 +187,8 @@
           A18 Pro with 16-Core Neural Engine
         </div>
         <div class="feature-badge-item">
-          <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9z"/></svg>
-          48MP Fusion &amp; Camera Control
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#d1b89d" stroke-width="2" fill="none"/><rect x="6" y="6" width="5" height="5" rx="1" fill="#d1b89d"/><rect x="13" y="6" width="5" height="5" rx="1" fill="#d1b89d"/><rect x="6" y="13" width="5" height="5" rx="1" fill="#d1b89d"/><circle cx="15.5" cy="15.5" r="1.5" fill="#d1b89d"/></svg>
+          48MP Square Camera System
         </div>
         <div class="feature-badge-item">
           <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.05.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.28-1.61 8.09-4.09l-2.6-1.53C16.12 17.84 14.21 19 12 19z"/></svg>

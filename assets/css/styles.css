@@ -1765,3 +1765,340 @@ button {
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+
+/* ==========================================================================
+   Hyper-Realistic & Vibrant Colorful Enhancements & Animations
+   ========================================================================== */
+
+/* 1. Fluid Aurora & Intelligence Gradient Mesh */
+.aurora-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  mix-blend-mode: screen;
+  animation: floatOrb 12s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 450px;
+  background: radial-gradient(circle, #ff2d55 0%, #ff9500 50%, transparent 70%);
+  top: 15%;
+  left: 10%;
+  animation-duration: 14s;
+}
+
+.orb-2 {
+  width: 550px;
+  height: 500px;
+  background: radial-gradient(circle, #0071e3 0%, #5856d6 50%, transparent 70%);
+  top: 30%;
+  right: 10%;
+  animation-duration: 18s;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 450px;
+  height: 400px;
+  background: radial-gradient(circle, #af52de 0%, #ff2d55 50%, transparent 70%);
+  bottom: 10%;
+  left: 35%;
+  animation-duration: 16s;
+  animation-delay: -8s;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, -40px) scale(1.15) rotate(180deg);
+  }
+  100% {
+    transform: translate(-40px, 30px) scale(0.9) rotate(360deg);
+  }
+}
+
+/* 2. Apple Intelligence Glowing Rainbow Border / Badge */
+.intelligence-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.intelligence-pill::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff2d55,
+    #ff9500,
+    #ffcc00,
+    #34c759,
+    #00c7be,
+    #30b0c7,
+    #0071e3,
+    #5856d6,
+    #af52de,
+    #ff2d55
+  );
+  animation: rotateConic 4s linear infinite;
+  opacity: 0.7;
+  z-index: -2;
+}
+
+.intelligence-pill::after {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  background: rgba(18, 18, 20, 0.92);
+  border-radius: var(--radius-pill);
+  z-index: -1;
+}
+
+@keyframes rotateConic {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmering Dynamic Text Gradient */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ff8eb3 25%,
+    #82d5ff 50%,
+    #f2c94c 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 6s linear infinite;
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* 3. Floating Device Physics with Smooth Drop Shadow */
+.floating-device {
+  animation: deviceFloat 6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes deviceFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.4deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* 4. Realistic 3D Tilt & Specular Shine on Bento Cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.card-specular-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.tilt-card:hover .card-specular-shine {
+  opacity: 1;
+}
+
+/* 5. ChairPods Dynamic Acoustic Wave & Equalizer Animation */
+.acoustic-wave-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.acoustic-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 113, 227, 0.35);
+  animation: ripplePulse 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.ripple-1 { width: 120px; height: 120px; animation-delay: 0s; }
+.ripple-2 { width: 180px; height: 180px; animation-delay: 1s; border-color: rgba(175, 82, 222, 0.3); }
+.ripple-3 { width: 240px; height: 240px; animation-delay: 2s; border-color: rgba(255, 45, 85, 0.25); }
+
+@keyframes ripplePulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+.equalizer-bar-group {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  margin-left: 8px;
+}
+
+.equalizer-bar {
+  width: 3.5px;
+  background: linear-gradient(to top, #0071e3, #af52de);
+  border-radius: 2px;
+  animation: eqBounce 1.2s ease-in-out infinite alternate;
+}
+
+.eq-1 { height: 60%; animation-delay: 0.1s; }
+.eq-2 { height: 95%; animation-delay: 0.3s; }
+.eq-3 { height: 40%; animation-delay: 0.2s; }
+.eq-4 { height: 80%; animation-delay: 0.4s; }
+
+@keyframes eqBounce {
+  0% { height: 25%; }
+  100% { height: 100%; }
+}
+
+/* 6. myPad Pro OLED Spectral Rainbow Aura */
+.oled-rainbow-aura {
+  position: absolute;
+  inset: -15px;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(255, 0, 128, 0.25) 0deg,
+    rgba(121, 40, 202, 0.25) 72deg,
+    rgba(0, 112, 243, 0.25) 144deg,
+    rgba(0, 223, 216, 0.25) 216deg,
+    rgba(121, 40, 202, 0.25) 288deg,
+    rgba(255, 0, 128, 0.25) 360deg
+  );
+  filter: blur(35px);
+  border-radius: var(--radius-card);
+  z-index: 0;
+  opacity: 0.7;
+  animation: rotateConic 8s linear infinite;
+}
+
+/* 7. PackBook Pro Cosmic Nebula Backdrop */
+.nebula-glow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 420px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(110, 64, 201, 0.45) 0%,
+    rgba(255, 45, 85, 0.3) 40%,
+    rgba(0, 113, 227, 0.15) 70%,
+    transparent 100%
+  );
+  filter: blur(65px);
+  pointer-events: none;
+  animation: pulseGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.95;
+  }
+}
+
+/* 8. Holographic Rainbow Foil for Apple Card */
+.holo-foil-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-foil-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 45, 85, 0.15) 45%,
+    rgba(0, 113, 227, 0.15) 55%,
+    rgba(52, 199, 89, 0.15) 65%,
+    transparent 80%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.6s ease;
+  transform: translateX(-100%);
+  mix-blend-mode: color-dodge;
+}
+
+.holo-foil-card:hover .holo-foil-overlay {
+  opacity: 1;
+  transform: translateX(100%);
+}

@@ -13,7 +13,7 @@ A pixel-perfect, responsive website inspired by Apple's official homepage, showc
 
 - **Clean White Navigation Bar**:
   - Translucent frosted glass effect (`backdrop-filter: saturate(180%) blur(20px)`), deepening upon scroll.
-  - Vector Apple branding, complete menu directory (*Store, Mac, iPad, NewtonPhone, Watch, Vision, AirPods, TV & Home, Entertainment, Accessories, Support*).
+  - Vector Apple branding, complete menu directory (*Store, PackBook, myPad, NewtonPhone, Watch, Vision, ChairPods, TV & Home, Entertainment, Accessories, Support*).
   - Interactive search bar trigger and shopping bag icon with live item badge counter.
   - Fully responsive mobile navigation with animated hamburger drawer.
 
@@ -26,18 +26,18 @@ A pixel-perfect, responsive website inspired by Apple's official homepage, showc
 - **NewtonPhone 16 Standard Section**:
   - Vibrant showcase highlighting the saturated color palette (*Ultramarine, Teal, Pink, White, Black*).
 
-- **MacBook Pro Section**:
+- **PackBook Pro Section**:
   - Space Black finish with Liquid Retina XDR screen glow and M4 chip credentials.
   - Performance metrics bar (*3.4x faster than M1 Max*, *24 hrs battery life*, *1600 nits peak HDR brightness*, *up to 128GB unified memory*).
 
-- **iPad Pro Section**:
+- **myPad Pro Section**:
   - Minimalist silver theme highlighting *"Thinpossible."* (5.1 mm ultra-thin profile, tandem OLED Ultra Retina XDR display, and Apple Pencil Pro).
 
 - **Apple Watch Series 10 Section**:
   - Jet Black polished finish, wide-angle OLED display, sleep apnea notifications, and fast charging metrics.
 
 - **Apple Bento Grid**:
-  - 2x2 responsive bento cards for **Apple Vision Pro**, **AirPods Pro**, **Apple Trade In**, and **Apple Card**.
+  - 2x2 responsive bento cards for **Apple Vision Pro**, **ChairPods Pro**, **Apple Trade In**, and **Apple Card**.
 
 - **Apple TV+ Entertainment Showcase**:
   - Streaming carousel featuring Apple Originals (*The Morning Show*, *Severance*).
@@ -96,7 +96,7 @@ No build tools or external dependencies required! Simply open the project in any
 
 ## 🎨 Design Tokens & Standards
 
-- **Typography:** `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif`
+- **Typography:** `-apple-system, BlinkPackBookSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif`
 - **Pill Buttons:** `border-radius: 980px`, Apple blue `#0071e3` / `#0077ed`
 - **Backdrop Blur:** `backdrop-filter: saturate(180%) blur(20px)`
 - **Responsive Breakpoints:** Optimized for Mobile (`< 540px`), Tablet (`< 834px`), Small Desktop (`< 1024px`), and Large Desktop (`1200px+`)

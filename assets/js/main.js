@@ -1,6 +1,6 @@
 /**
  * Apple Homepage Interactive Script
- * Handles Navigation, Modals, Color Switchers, Bag Drawer, and Animations
+ * Handles Navigation, Modals, Color Switchers, Bag Drawer, 3D Tilt, and Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,17 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 3. Interactive Color Switcher (iPhone 16 Pro) ---
+  // --- 3. Interactive Color Switcher (NewtonPhone 16 Pro) ---
   const proColorDots = document.querySelectorAll('.hero-iphone-pro .color-dot');
   const proColorLabel = document.getElementById('pro-color-name');
   const proHeroGlow = document.querySelector('.hero-iphone-pro .hero-glow');
-  const proHeroImg = document.getElementById('pro-hero-device');
 
   const proColorThemes = {
-    desert: { name: 'Desert Titanium', glow: 'rgba(201, 176, 154, 0.28)' },
-    natural: { name: 'Natural Titanium', glow: 'rgba(157, 150, 141, 0.28)' },
-    white: { name: 'White Titanium', glow: 'rgba(227, 228, 229, 0.28)' },
-    black: { name: 'Black Titanium', glow: 'rgba(75, 74, 73, 0.35)' }
+    desert: { name: 'Desert Titanium', glow: 'rgba(201, 176, 154, 0.35)' },
+    natural: { name: 'Natural Titanium', glow: 'rgba(157, 150, 141, 0.35)' },
+    white: { name: 'White Titanium', glow: 'rgba(227, 228, 229, 0.35)' },
+    black: { name: 'Black Titanium', glow: 'rgba(75, 74, 73, 0.45)' }
   };
 
   proColorDots.forEach(dot => {
@@ -57,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (proColorThemes[colorKey]) {
         proColorLabel.textContent = proColorThemes[colorKey].name;
         if (proHeroGlow) {
-          proHeroGlow.style.background = `radial-gradient(circle, ${proColorThemes[colorKey].glow} 0%, rgba(0, 0, 0, 0) 70%)`;
+          proHeroGlow.style.background = 'radial-gradient(circle, ' + proColorThemes[colorKey].glow + ' 0%, rgba(0, 0, 0, 0) 70%)';
         }
       }
     });
   });
 
-  // --- 4. Interactive Color Switcher (iPhone 16 Standard) ---
+  // --- 4. Interactive Color Switcher (NewtonPhone 16 Standard) ---
   const stdColorDots = document.querySelectorAll('.hero-iphone-16 .color-dot');
   const stdColorLabel = document.getElementById('std-color-name');
 
@@ -227,8 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '1TB', add: 500 }
       ]
     },
-    'macbook-pro': {
-      title: 'MacBook Pro 14"',
+    'packbook-pro': {
+      title: 'PackBook Pro 14"',
       color: 'Space Black',
       basePrice: 1599,
       image: 'assets/images/macbook_hero_2x.png',
@@ -239,8 +238,20 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '4TB', add: 1200 }
       ]
     },
-    'ipad-pro': {
-      title: 'iPad Pro 11"',
+    'macbook-pro': {
+      title: 'PackBook Pro 14"',
+      color: 'Space Black',
+      basePrice: 1599,
+      image: 'assets/images/macbook_hero_2x.png',
+      storageOptions: [
+        { label: '512GB', add: 0 },
+        { label: '1TB', add: 200 },
+        { label: '2TB', add: 600 },
+        { label: '4TB', add: 1200 }
+      ]
+    },
+    'mypad-pro': {
+      title: 'myPad Pro 11"',
       color: 'Space Black',
       basePrice: 999,
       image: 'assets/images/ipad_promo.jpg',
@@ -249,6 +260,42 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '512GB', add: 200 },
         { label: '1TB', add: 600 },
         { label: '2TB', add: 1000 }
+      ]
+    },
+    'ipad-pro': {
+      title: 'myPad Pro 11"',
+      color: 'Space Black',
+      basePrice: 999,
+      image: 'assets/images/ipad_promo.jpg',
+      storageOptions: [
+        { label: '256GB', add: 0 },
+        { label: '512GB', add: 200 },
+        { label: '1TB', add: 600 },
+        { label: '2TB', add: 1000 }
+      ]
+    },
+    'chairpods-pro': {
+      title: 'ChairPods Pro (2nd Gen)',
+      color: 'White',
+      basePrice: 249,
+      image: 'assets/images/airpods_promo.jpg',
+      storageOptions: [
+        { label: 'Standard Case', add: 0 },
+        { label: 'MagSafe USB-C', add: 0 },
+        { label: 'Custom Engraved', add: 0 },
+        { label: 'AppleCare+ Bundle', add: 29 }
+      ]
+    },
+    'airpods-pro': {
+      title: 'ChairPods Pro (2nd Gen)',
+      color: 'White',
+      basePrice: 249,
+      image: 'assets/images/airpods_promo.jpg',
+      storageOptions: [
+        { label: 'Standard Case', add: 0 },
+        { label: 'MagSafe USB-C', add: 0 },
+        { label: 'Custom Engraved', add: 0 },
+        { label: 'AppleCare+ Bundle', add: 29 }
       ]
     },
     'watch-series-10': {
@@ -273,18 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '512GB', add: 200 },
         { label: '1TB', add: 400 },
         { label: '2TB', add: 800 }
-      ]
-    },
-    'airpods-pro': {
-      title: 'AirPods Pro (2nd Gen)',
-      color: 'White',
-      basePrice: 249,
-      image: 'assets/images/airpods_promo.jpg',
-      storageOptions: [
-        { label: 'Standard Case', add: 0 },
-        { label: 'MagSafe USB-C', add: 0 },
-        { label: 'Custom Engraved', add: 0 },
-        { label: 'AppleCare+ Bundle', add: 29 }
       ]
     }
   };
@@ -397,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBtn = document.getElementById('nav-search-btn');
   if (searchBtn) {
     searchBtn.addEventListener('click', () => {
-      const query = prompt('Search apple.com: (e.g. NewtonPhone 16 Pro, MacBook Pro, iPad Pro, Apple Watch)', 'NewtonPhone 16 Pro');
+      const query = prompt('Search apple.com: (e.g. NewtonPhone 16 Pro, PackBook Pro, myPad Pro, ChairPods Pro, Apple Watch)', 'NewtonPhone 16 Pro');
       if (query) {
         showToast(`Searching Apple for "${query}"...`);
         const targetSection = document.querySelector(`[data-search*="${query.toLowerCase()}"]`);
@@ -448,11 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // Initialize Bag UI
-  updateBagUI();
-});
-
-  // --- View Mode Switcher (Device Overview vs Square Camera System) ---
+  // --- 10. View Mode Switcher (Device Overview vs Square Camera System) ---
   const btnViewDevice = document.getElementById('btn-view-device');
   const btnViewCamera = document.getElementById('btn-view-camera');
   const deviceShowcaseWrap = document.getElementById('device-showcase-wrap');
@@ -473,3 +504,34 @@ document.addEventListener('DOMContentLoaded', () => {
       cameraShowcase.classList.add('active');
     });
   }
+
+  // --- 11. Realistic 3D Tilt & Specular Shine on Bento Cards ---
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -5; // max 5 deg tilt
+      const rotateY = ((x - centerX) / centerX) * 5;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+      
+      const posX = ((x / rect.width) * 100).toFixed(1);
+      const posY = ((y / rect.height) * 100).toFixed(1);
+      card.style.setProperty('--mouse-x', `${posX}%`);
+      card.style.setProperty('--mouse-y', `${posY}%`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+
+  // Initialize Bag UI
+  updateBagUI();
+});

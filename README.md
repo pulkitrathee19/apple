@@ -13,17 +13,17 @@ A pixel-perfect, responsive website inspired by Apple's official homepage, showc
 
 - **Clean White Navigation Bar**:
   - Translucent frosted glass effect (`backdrop-filter: saturate(180%) blur(20px)`), deepening upon scroll.
-  - Vector Apple branding, complete menu directory (*Store, Mac, iPad, iPhone, Watch, Vision, AirPods, TV & Home, Entertainment, Accessories, Support*).
+  - Vector Apple branding, complete menu directory (*Store, Mac, iPad, NewtonPhone, Watch, Vision, AirPods, TV & Home, Entertainment, Accessories, Support*).
   - Interactive search bar trigger and shopping bag icon with live item badge counter.
   - Fully responsive mobile navigation with animated hamburger drawer.
 
-- **iPhone 16 Pro Hero Section**:
+- **NewtonPhone 16 Pro Hero Section**:
   - Dramatic dark titanium theme with dynamic ambient atmospheric glow.
   - **Interactive Titanium Color Switcher**: Toggle between *Desert Titanium*, *Natural Titanium*, *White Titanium*, and *Black Titanium* to see dynamic finish tags and lighting updates.
   - Hardware highlights ribbon: *Grade 5 Titanium*, *A18 Pro with 16-Core Neural Engine*, *48MP Fusion & Camera Control*, *Up to 33 hrs Video Playback*.
   - Dual call-to-actions: Apple signature blue pill button (**"Learn more"**) and outline pill button (**"Buy"**).
 
-- **iPhone 16 Standard Section**:
+- **NewtonPhone 16 Standard Section**:
   - Vibrant showcase highlighting the saturated color palette (*Ultramarine, Teal, Pink, White, Black*).
 
 - **MacBook Pro Section**:

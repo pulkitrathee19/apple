@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let shoppingBag = [
     {
       id: 1,
-      title: 'iPhone 16 Pro 256GB',
+      title: 'NewtonPhone 16 Pro 256GB',
       color: 'Desert Titanium',
       price: 1099,
       image: 'assets/images/iphone_18_pro_2x.png'
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const configAddBtn = document.getElementById('config-add-btn');
 
   let currentConfig = {
-    title: 'iPhone 16 Pro',
+    title: 'NewtonPhone 16 Pro',
     color: 'Desert Titanium',
     basePrice: 999,
     storageMultiplier: 0,
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Products Database for Configurator
   const productsDB = {
     'iphone-16-pro': {
-      title: 'iPhone 16 Pro',
+      title: 'NewtonPhone 16 Pro',
       color: 'Desert Titanium',
       basePrice: 999,
       image: 'assets/images/iphone_18_pro_2x.png',
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'iphone-16': {
-      title: 'iPhone 16',
+      title: 'NewtonPhone 16',
       color: 'Ultramarine',
       basePrice: 799,
       image: 'assets/images/iphone_16_2x.png',
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBtn = document.getElementById('nav-search-btn');
   if (searchBtn) {
     searchBtn.addEventListener('click', () => {
-      const query = prompt('Search apple.com: (e.g. iPhone 16 Pro, MacBook Pro, iPad Pro, Apple Watch)', 'iPhone 16 Pro');
+      const query = prompt('Search apple.com: (e.g. NewtonPhone 16 Pro, MacBook Pro, iPad Pro, Apple Watch)', 'NewtonPhone 16 Pro');
       if (query) {
         showToast(`Searching Apple for "${query}"...`);
         const targetSection = document.querySelector(`[data-search*="${query.toLowerCase()}"]`);
